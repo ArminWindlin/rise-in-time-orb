@@ -21,7 +21,7 @@
                          src="../assets/groups/rectangle-menu-link.svg">
 
                     <div class="dropdown-content" :class="{'first-dropdown-content': i === 0}">
-                        <router-link :to="{path: '/articles/' + replaceWhiteSpaces(menuDropDownItem.toLowerCase())}"
+                        <router-link :to="{path: replaceWhiteSpaces(menuDropDownItem.toLowerCase())}"
                                      v-for="(menuDropDownItem  ) in menuDropDown.dropDowns"
                                      v-bind:key="menuDropDownItem.index" href="#">{{ menuDropDownItem }}
                         </router-link>
@@ -68,8 +68,8 @@ export default {
             }
         },
         navigateToStandaloneComponent(componentString) {
-            if (this.$route.path !== `/articles/${this.replaceWhiteSpaces(componentString)}`)
-                this.router.push(`/articles/${this.replaceWhiteSpaces(componentString)}`);
+            if (this.$route.path !== `/${this.replaceWhiteSpaces(componentString)}`)
+                this.router.push(`/${this.replaceWhiteSpaces(componentString)}`);
         },
         replaceWhiteSpaces(str) {
             return str.replace(' ', '-').replace(' ', '-');

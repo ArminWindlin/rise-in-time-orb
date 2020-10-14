@@ -15,6 +15,11 @@
     "isLastElement": false
   },
   {
+    "menuLink": "Article Page",
+    "isDropDown": false,
+    "isLastElement": false
+  },
+  {
     "menuLink": "Art Gallery",
     "isDropDown": false,
     "isLastElement": true

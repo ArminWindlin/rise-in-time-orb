@@ -109,6 +109,7 @@ export default {
     methods: {},
     beforeMount() {
         this.articleName = this.$route.params.id;
+        console.log("articleName: " + this.articleName);
         import('../data/wiki_articles/fields/' + this.articleName + '.json').then((e) => {
                     this.wikiArticles = e;
                 }

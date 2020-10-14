@@ -11,6 +11,8 @@ import TreasureTable from './components/pages/treasureTable';
 import BattleBoard from './components/pages/battleBoard';
 import ArtGallery from './components/pages/artGallery';
 import BOI from './components/pages/boi';
+import ArticlePage from './components/articlePage';
+import FAQ from './components/pages/faq'
 import DetectAgent from './helper/detectAgent';
 
 Vue.use(VueResource);
@@ -29,13 +31,13 @@ const router = new VueRouter({
     base: __dirname,
     routes: [
         {path: '/', component: HomePage},
-        {path: '/articles/treasure-rewards', component: TreasureTable},
-        {path: '/articles/battle-board', component: BattleBoard},
-        {path: '/articles/art-gallery', component: ArtGallery},
-        {path: '/articles/board-of-immortality', component: BOI},
+        {path: '/treasure-rewards', component: TreasureTable},
+        {path: '/battle-board', component: BattleBoard},
+        {path: '/art-gallery', component: ArtGallery},
+        {path: '/board-of-immortality', component: BOI},
         {path: '*', component: HomePage},
-        // {path: '/articles/faq', component: FAQ},
-        // {path: '/articles/:id', component: ArticlePage},
+        {path: '/faq', component: FAQ},
+        {path: '/:id', component: ArticlePage},
     ],
 });
 

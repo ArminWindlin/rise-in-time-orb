@@ -5,12 +5,12 @@
             <Menu v-if="!$isMobile"></Menu>
 
             <MobileMenu v-if="$isMobile"></MobileMenu>
-            <!-- <form action="/">
+            <form action="/">
                 <div class="input-field">
-                    <input class="search-input" type="text" placeholder="Suche..." name="search">
+                    <input class="search-input" type="text" placeholder="search wikipage..." name="search">
                     <img class="search-icon" src="../assets/Union.svg">
                 </div>
-            </form> -->
+            </form>
             <img class="deco1" src="../assets/groups/group-48.svg" v-if="!$isMobile">
             <img class="deco1-mobile" src="../assets/groups/deco1-reverse.svg" v-if="$isMobile">
             <div class="info-block" v-if="!$isMobile">

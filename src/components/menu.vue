@@ -1,12 +1,12 @@
 <template>
     <div class="top-container">
-        <router-link class="logo-container" to="/">
-            <img class="logo-image" src="../assets/logo.svg">
-            <div v-if="!$isMobile" class="logo-text">Rise in Time - Orb</div>
-        </router-link>
         <div id="menu" class="row">
             <div class="menu"
                  v-bind:class="{ active: isActive, 'menuWindow': isActive &&  width < 549 }">
+                <router-link class="logo-container" to="/">
+                    <img class="logo-image" src="../assets/logo.svg">
+                    <div v-if="!$isMobile" class="logo-text">Orb</div>
+                </router-link>
                 <div class="dropdown" v-for="(menuDropDown, i) in menuDropDowns" v-bind:key="menuDropDown.menuLink">
                     <button v-if="!noDropDowns.includes(menuDropDown.menuLink)" v-bind:key="menuDropDown.key"
                             class="dropdown-button"
@@ -199,7 +199,7 @@ ul {
     font-size: 14px;
     color: #000000;
     text-decoration: none;
-    flex: 2;
+    flex: 4;
 }
 
 .logo-image {
@@ -245,11 +245,11 @@ li.menu__item.menu__item {
 }
 
 .logo-container {
-    margin-top: 20px;
+    margin-top: 30px;
     margin-left: 10px;
     display: flex;
     flex-direction: row;
-    width: 18%;
+    width: 10%;
     align-items: center;
     justify-content: center;
 }
